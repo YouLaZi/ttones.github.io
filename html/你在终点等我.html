@@ -1,0 +1,161 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>你在终点等我</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<link rel="stylesheet" type="text/css" href="../css/bg.css">
+
+
+</head>
+<body marginheight="0" marginwidth="0" bgcolor="white" class="bg" id="body">
+	
+<!--header-->
+<DIV CLASS="h">
+<div class="header w">
+	
+<!--logo-->
+<div class="logo"></div>
+<!--nav-->
+<div class="nav">
+<ul>
+	<li><a href="Index.html">Home</a></li>
+    <li><a href="zzROCK.html">Rock</a></li>
+    <li><a href="zzPOP.html">Pop</a></li>
+    <li><a href="zzLIGHT.html">Light</a></li>
+	<li><a href="zzFOLK.html">Folk</a></li>
+    <li><a href="about us/About us.html">About us</a></li></ul>
+</div>
+	
+<!--searcher-->
+<div class="searcher">
+	<input type="text" id="search" value="请输入关键词" 
+        onfocus="if(value=='请输入关键词')value=''"
+        onblur="if(!value)value='请输入关键词'" 
+        name="keyword">
+	<button></button>
+</div>
+	
+<!--user-->
+<div class="user"><img src="../images/01.png" alt="头像">油辣子</div>
+</div>
+</div>
+<!--layer-->
+<div class="LLlayer4">
+	<div class="boxtop">
+    </div>
+    
+    <div class="mmain bg">
+       <div class="boxleft">
+       <br><br><br><span class="span1">专辑</span><br>
+      <img  class="img-yuanjiao" src="../images/王菲.jpg" width="400px">
+       	<br>
+		<span class="span1">《你在终点等我》</span>	
+       </div>
+       
+       
+       
+       
+       
+       <div class="boxright">
+       <hr size="1" noshade color="#666666" width="95%">    
+       <font face="楷体" color="#999999" size="+6"><span>《你在终点等我  
+》</span></font><br>
+<hr size="1" noshade color="#666666" width="95%">
+      <img  class="bofang" id="icon" src="../images/播放.png">
+<br><br>
+<textarea cols="40" rows="29.5" disabled readonly>
+作词 : 姚若龙
+作曲 : 陈小霞
+编曲 : 赵兆
+ 
+是你给了我一把伞
+撑住倾盆撒落的孤单
+所以好想送你一弯河岸
+洗涤腐蚀心灵的遗憾
+给你我所有的温暖
+脱下唯一挡风的衣衫
+思念刮过背脊打着冷颤
+眼神仍旧为你而点燃
+我一直追寻着你心情的足迹
+被所有的人误解都要理解你
+准备好当擦亮你天际的浮云
+你却在终点等我笑里有雨滴
+我甘愿成全了你珍藏的往昔
+只想你找回让你像你的热情
+然后就拖着自己到山城隐居
+你却在终点等我住进你心里
+没有你的地方都是他乡
+没有你的旅行都是流浪
+那些兜兜转转的曲折与感伤
+都是翅膀都为了飞来你肩上
+我一直追寻着你心情的足迹
+被所有的人误解都要理解你
+准备好当擦亮你天际的浮云
+你却在终点等我笑里有雨滴
+我甘愿成全了你珍藏的往昔
+只想你找回让你像你的热情
+然后就拖着自己到山城隐居
+你却在终点等我住进你心里</textarea>
+
+		<div style="float:right; margin-left:20px">
+        <span class="span1">Mv</span>
+        <hr size="1" noshade color="#990000" width="45%">
+ <video src="../media/王菲 - 你在终点等我.mp4" width="600px" controls></video>    
+        </div>
+        
+       </div>
+	</div>
+
+</div>
+	
+
+<!--footer-->
+<div class="footer">
+	<div class="copyright">
+    
+    
+    
+    </div>
+</div>
+
+    <audio id="taichang">
+    	<source src="../media/王菲.mp3" type="audio/mp3">
+    </audio>
+<script>
+	var taichang = document.getElementById("taichang");
+	var icon = document.getElementById("icon");	
+	
+	icon.onclick = function(){
+		if(taichang.paused){
+		taichang.play();
+		icon.src = "../images/暂停.png";
+		}else{
+			taichang.pause()
+		icon.src = "../images/播放.png";
+		}
+	}
+</script>
+<script>
+  let cw = 1920,ch = 1080
+  let body = document.getElementById('body')
+  body.style.width = `${cw}px`
+  body.style.height = `${ch}px`
+
+  function windowResize() {
+    let w = window.innerWidth, h = window.innerHeight
+    
+    let r = w / cw < h / ch ? w / cw : h / ch
+
+    body.style.transform = `scale( ${r})`
+    body.style.marginLeft = (-(cw - r * cw) / 2 + (w - r * cw) / 2) + 'px'
+    body.style.marginTop = (-(ch - r * ch) / 2 + (h - r * ch) / 2) + 'px'
+    body.style.marginBottom = (-(h>ch?h:ch - r * ch)) + 'px'
+    body.style.marginRight = (-(w>cw?w:cw - r * cw)) + 'px'
+  }
+
+</script>
+
+</body>
+</html>

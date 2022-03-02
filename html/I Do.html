@@ -1,0 +1,184 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>I Do</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<link rel="stylesheet" type="text/css" href="../css/bg.css">
+
+
+
+</head>
+<body marginheight="0" marginwidth="0" bgcolor="white" class="bg" id="body">
+	
+<!--header-->
+<DIV CLASS="h">
+<div class="header w">
+	
+<!--logo-->
+<div class="logo"></div>
+<!--nav-->
+<div class="nav">
+<ul>
+	<li><a href="../index.html">Home</a></li>
+    <li><a href="../html/zzROCK.html">Rock</a></li>
+    <li><a href="../html/zzPOP.html">Pop</a></li>
+    <li><a href="../html/zzLIGHT.html">Light</a></li>
+	<li><a href="../html/zzFOLK.html">Folk</a></li>
+    <li><a href="../html/About us.html">About us</a></li>
+</div>
+	
+<!--searcher-->
+<div class="searcher">
+	<input type="text" id="search" value="请输入关键词" 
+        onfocus="if(value=='请输入关键词')value=''"
+        onblur="if(!value)value='请输入关键词'" 
+        name="keyword">
+	<button></button>
+</div>
+	
+<!--user-->
+<div class="user"><img src="../images/01.png" alt="头像">油辣子</div>
+</div>
+</div>
+<!--layer-->
+<div class="LLlayer4">
+	<div class="boxtop">
+    </div>
+    
+    <div class="mmain bg">
+       <div class="boxleft">
+       <br><br><br><span class="span1">专辑</span><br>
+      <img  class="img-yuanjiao" src="../images/mowenwei.jpg" width="400px">
+       	<br>
+		<span class="span1">《我们在中场相遇》</span>	
+       </div>
+       
+       
+       
+       
+       
+       <div class="boxright">
+       <hr size="1" noshade color="#666666" width="95%">    
+       <font face="楷体" color="#999999" size="+6"><span>《I Do》</span></font><br>
+<hr size="1" noshade color="#666666" width="95%">
+      <img  class="bofang" id="icon" src="../images/播放.png">
+<br><br>
+<textarea cols="40" rows="29.5" disabled readonly>
+演唱 : 莫文蔚
+作词 : 李焯雄
+作曲 : 伦永亮
+编曲 : 刘胡轶
+制作人 : 荒井十一
+摘满月戴无名指间
+缘份铸就的圆
+有名字的眷恋 爱的冠冕
+像海洋容纳了雨点
+你承接我一切
+爱的同心圆 请你套进我指尖
+I Do 今后无论贫富
+I Do 执子之手共度
+爱是甘于付出 寻常也很满足
+漫漫长路 爱是莫忘最初
+I Do 为了你 我愿意 Yes I Do
+爱又温柔又坚固
+这信物象征了永远
+一起擦亮誓言
+爱的同心圆 让我套进你指尖
+I Do 今后无论贫富
+I Do 执子之手共度
+爱是甘于付出 寻常也很满足
+漫漫长路 爱是莫忘最初
+I Do 为了你 我愿意 Yes I Do
+爱又温柔又坚固
+当世界 一直在变 你没变
+当不早不晚 走到这一天
+感觉像无限初恋
+I Do 今后无论甘苦
+I Do 执子之手相扶
+爱是不求好处 寻常也很幸福
+漫漫长路 爱是莫忘最初
+I Do 为了你 我愿意 Yes I Do
+爱又丰盛又纯朴
+莫失莫忘一生守护
+
+
+制作人 : 荒井十一
+鼓&打击乐 : 荒井十一
+贝斯 : 陈兆基
+吉他 : 胡洋
+钢琴&计算机编程 : 刘胡轶
+和声 : 莫文蔚/田晓梅
+弦乐 : 国际首席爱乐乐团
+主唱&和声录音 : 荒井十一/克昶 SanbistLin@白金录音室
+所有乐器录音 : 倪涵文@TweakToneLabs
+弦乐录音 : 李巍@中国剧院录音棚
+音乐编程 : 荒井十一/倪涵文@TweakToneLabs
+混音师 : 赵靖@BIGJStudio
+母带处理 : Greg Calbi@Sterling Sound
+OP : Musechic Ltd. Admin by Sony/ATV Music Publishing (HK)
+SP : Sony Music Publishing (Pte) Ltd. Taiwan Branch
+OP : Doluna Productions Ltd. Admin by EMI Music Publishing Hong Kong
+SP : EMI Music Publishing (S.E.Asia) Ltd. Taiwan Branch</textarea>
+
+		<div style="float:right; margin-left:20px">
+        <span class="span1">Mv</span>
+        <hr size="1" noshade color="#990000" width="45%">
+ <video src="../media/I Do.mp4" width="600px" controls></video>    
+        </div>
+        
+       </div>
+	</div>
+
+</div>
+	
+
+<!--footer-->
+<div class="footer">
+	<div class="copyright">
+    
+    
+    
+    </div>
+</div>
+
+    <audio id="taichang">
+    	<source src="../media/I Do.mp3" type="audio/mp3">
+    </audio>
+<script>
+	var taichang = document.getElementById("taichang");
+	var icon = document.getElementById("icon");	
+	
+	icon.onclick = function(){
+		if(taichang.paused){
+		taichang.play();
+		icon.src = "../images/暂停.png";
+		}else{
+			taichang.pause()
+		icon.src = "../images/播放.png";
+		}
+	}
+</script>
+<script>
+  let cw = 1920,ch = 1080
+  let body = document.getElementById('body')
+  body.style.width = `${cw}px`
+  body.style.height = `${ch}px`
+
+  function windowResize() {
+    let w = window.innerWidth, h = window.innerHeight
+    
+    let r = w / cw < h / ch ? w / cw : h / ch
+
+    body.style.transform = `scale( ${r})`
+    body.style.marginLeft = (-(cw - r * cw) / 2 + (w - r * cw) / 2) + 'px'
+    body.style.marginTop = (-(ch - r * ch) / 2 + (h - r * ch) / 2) + 'px'
+    body.style.marginBottom = (-(h>ch?h:ch - r * ch)) + 'px'
+    body.style.marginRight = (-(w>cw?w:cw - r * cw)) + 'px'
+  }
+
+</script>
+
+</body>
+</html>

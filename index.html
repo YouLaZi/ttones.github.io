@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>主页</title>
+<link rel="stylesheet" type="text/css" href="css/main1.css">
+<link rel="stylesheet" type="text/css" href="css/banner.css">
+<link rel="stylesheet" type="text/css" href="css/bg.css">
+</head>
+<body marginheight="0" marginwidth="0" class="bg">
+	
+<!--header-->
+<div CLASS="h">
+<div class="header w">
+	
+<!--logo-->
+<div class="logo"></div>
+	
+<!--nav-->
+<div class="nav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+    <li><a href="html/zzROCK.html">Rock</a></li>
+    <li><a href="html/zzPOP.html">Pop</a></li>
+    <li><a href="html/zzLIGHT.html">Light</a></li>
+	<li><a href="html/zzFOLK.html">Folk</a></li>
+    <li><a href="html/About us.html">About us</a></li>
+</ul>
+</div>
+	
+<!--searcher-->
+<div class="searcher">
+	<input type="text" id="search" value="请输入关键词" 
+        onfocus="if(value=='请输入关键词')value=''"
+        onblur="if(!value)value='请输入关键词'" 
+        name="keyword">
+	<button></button>
+</div>
+	
+<!--user-->
+<div class="dropdown">
+  <img src="images/01.png" alt="头像" width="40">
+	<font color="#bfbfbf">油辣子</font>
+  <div class="dropdown-content">
+  <img src="images/01.png" alt="Coffee" width="100" height="100">
+  <div class="desc"><a href="html/登录.html">登录</a>&nbsp;&nbsp;<a href="html/注册.html">注册</a></div>
+  </div>
+</div>
+</div>
+</div>
+
+<!--banner-->	
+<div class="wrap" calss="wrap">
+		<ul class="list">
+			<li class="item active"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+		</ul>
+		<ul class="pointlist">
+		    <li class="point active" data-index = '0'></li>
+			<li class="point" data-index = '1'></li>
+			<li class="point" data-index = '2'></li>
+			<li class="point" data-index = '3'></li>
+		</ul>
+		<button type="button" class="btn1" id="goPre"><img src="images/pre.png"></button>
+		<button type="button" class="btn2" id="goNext"><img src="images/next.png"></button>
+</div>
+	
+	<script type="text/javascript">
+		var items = document.getElementsByClassName('item');//图
+		var points = document.getElementsByClassName('point');//按钮
+		var goPreBtn = document.getElementById('goPre');//上一个
+		var goNextBtn = document.getElementById('goNext');//下一个
+		
+		var time = 0;
+		
+		var index = 0;
+		
+		var clearActive = function(){
+			for (var i = 0; i < items.length ; i++){
+				items[i].className = 'item';
+			}
+			for (var i = 0; i < points.length ; i++){
+				points[i].className = 'point';
+			}
+		}
+		
+		var goIndex = function() {
+			clearActive();
+			console.log(index)
+			points[index].className = 'point active';
+			items[index].className = 'item active';
+		}
+		
+		var goNext = function() {
+			if(index < 3){
+				index++;
+			} else {
+				index = 0;
+			}
+			
+			goIndex();
+		}
+		
+		var goPre = function() {
+			if(index == 0){
+				index = 3;
+			} else {
+				index--;
+			}
+			goIndex();
+		}
+		
+		goNextBtn.addEventListener('click', function() {
+			goNext();
+		})
+		goPreBtn.addEventListener('click', function() {
+			goPre();
+		})
+		
+		for(var i = 0; i < points.length; i++) {
+			points[i].addEventListener('click', function() {
+				var pointIndex = this.getAttribute('data-index');
+				index = pointIndex;
+				goIndex();
+				time = 0;
+			})
+		}
+	
+		setInterval(function() {
+			time++;
+			if(time == 20){
+				goNext();
+				time = 0;
+			}
+		},200)
+</script>
+	
+<!--option-->
+<div class="box">
+	<ul class="op">
+		<li class="option">Rock</li>
+		<li class="option">丨</li>
+		<li class="option">Pop</li>
+		<li class="option">丨</li>
+		<li class="option">Light</li>
+		<li class="option">丨</li>
+		<li class="option">Folk</li>
+	</ul>
+</div>
+	<br>
+
+	<hr color="#F76164" size="2" width="88%">
+<br>
+
+<div class="container">
+
+		
+<!--music-->
+<div class="m">
+  <div class="m_1">
+    <p><center>
+      <font style="font-size: 36px;"><em style="color: pink"><strong>ROCK</strong></em></font></center>
+		<a href="html/zzROCK.html"><img src="images/rock.jpg"></a>
+  </div>
+  <div class="m_2"><p><center>
+      <font style="font-size: 36px;"><em style="color: pink"><strong>POP</strong></em></font></center><a href="html/zzPOP.html"><img src="images/Linkin Park.jpg"></a></div>
+</div>
+<div class="m">
+	<div class="m_3"><p><center>
+      <font style="font-size: 36px;"><em style="color: pink"><strong>FOLK</strong></em></font></center><a href="html/zzFOLK.html"><img src="images/FOLK.jpg"></a>
+  </div>
+	<div class="m_4"><p><center>
+      <font style="font-size: 36px;"><em style="color: pink"><strong>LIGHT</strong></em></font></center><a href="html/zzLIGHT.html"><img src="images/Taylor Swift.jpg"></a></div>
+</div>
+	
+
+<!--layer-->
+	<div class="layer1">
+		<div class="content">
+          <div class="img-box1">
+           <a href="html/In My Blood.html"><img src="images/Shawn Mendes3.jpg" width="780"></a>
+          </div>
+          <div class="right-box">
+             <span style="font-family: 'Microsoft JhengHei UI Light'; font-size: 20px;">Shawn Mendes从默默无名的加拿大青少年，到如今全球皆知的流行巨星，彷彿像是一段乐坛的传奇神话，短短5年内，站上纽约麦迪逊广场演唱会舞台，唱遍全世界发光发热，谱写的歌曲感动数十亿人；再也不只是当初在网路平台Vine翻唱Justin Bieber"As Long As You Love Me"的青涩男孩，更可以与当代巨星们平起平坐的存在，这一张“同名专辑”就是最好的证明。
+ 
+在2013年凭借自弹自唱爆红的Shawn Mendes，至今日已是连续拥有两张Billboard冠军专辑的新世代天王，还被TIME选入「2018年百大影响人物」名单，可见他在青少年世界的影响力；年仅19岁的Shawn Mendes，在全球卖出超过1亿张的专辑+单曲销量，更称霸了流媒体市场，缔造出110亿次的收听次数、超过40座大奖肯定等，这些丰功伟业，已使他成为最耀眼的乐坛新一代巨星。然而成名的压力让Shawn Mendes在创作之路上遭逢了困境，在最近的访谈中公开表示自己受焦虑症所苦，且影响到他的心理健康，然而他却没有意志消沉，反而把这样的痛苦经历化为音乐能量向众人诠释，「我想要创作出让跟我有一样困境的人，能够产生联系的歌曲，在你听完之后，能从中走出来，并且变得更好、更强壮」，也因此Shawn Mendes终于交出蜕变与进化后，万众期盼的最新同名专辑【Shawn Mendes】。
+ 
+【Shawn Mendes】请到了神曲制造机Louis Bell(Justin Bieber、巨星Post Malone)以及搭档好友Teddy Geiger(One Direction、Maroon 5)共同操盘，全力打造这一张万众瞩目的年度专辑；首支单曲"In My Blood"，横扫全球50多国的iTunes榜拿下冠军宝座，其中的流行摇滚配上爆发力歌喉，完美的组合展露无遗；融合Funk与R&B的律动单曲"Lost In Japan"，是受到前辈Justin Timberlake启发的杰作，不仅音调轻盈跳跃，其中隐约蕴藏的节奏感，让人惊艳于Shawn Mendes在创作上显著成长；除此之外，与年度新人Julia Michaels合作的"Like To Be You"、献给在Ariana Grande曼彻斯特演唱会，遭受恐攻的孩子们，与R&B新声力量Khalid一同薰陶的"Youth"、深情动人大作"Perfectly Wrong"等，都是专辑中绝不可错过的力作。不到20岁，已快速席卷歌坛的Shawn Mendes，今年要以同名专辑【Shawn Mendes】改变乐坛。</span>
+          </div>
+     </div>  
+	</div>
+	<div class="layer2">		
+		<div class="content">
+        	<div class="left-box">
+             <span style="font-family: 'Microsoft JhengHei UI Light'; font-size: 21px;">Zaslavski 生于俄罗斯，后随家人移居德国。他的父母均为音乐家，从小接受传统的音乐教育。四岁时开始学习钢琴和打鼓。在2002年时，他作为德国乐队Dioramic的成员，签约Lifeforce Records。Anton对电音制作的兴趣在听到法国电音乐队Justice的专辑Cross后被激发，而后他在2009年开始了电子音乐的制作。
+音乐制作
+安东以“Zedd”的艺名制作了一系列的混音及原创音乐。他赢得两次Beatport混音比赛，在现场掀起波澜；他的第一支原创单曲《The Anthem》进入了Beatport电子浩室音乐榜20强。他制作的Skrillex的《Scary Monsters and Nice Sprites》的重混版进入了Beatport电子浩室音乐十强榜的第2位。从此他便开始为许多知名艺人制作重混，包括黑眼豆豆、Lady Gaga、Skrillex等。
+2011年，Zedd制作的Lady Gaga的单曲《天生完美》和《夜的嫁衣》重混版被收录到Lady Gaga本人第三张录音室专辑《天生完美》的豪华版中。9月，Zedd的单曲《Shave It Up》在Skrillex的YouTube页面首先放出了30秒的试听首播，这也是Zedd在OWSLA Records唱片公司的第一支单曲。
+2012年，Zedd与Interscope Records唱片公司签约，并发行了他在这家厂牌的第一支单曲《Spectrum》 ，由Matthew Koma演唱。随后，他制作了Eva Simons的歌曲《I Don't Like You》，也在Interscope发行。他还与Max Martin共同为贾斯汀·比伯制作了第三张录音室专辑《Believe》中的单曲《Beauty and a Beat》。
+2012年10月，Zedd发行个人第一张录音室专辑《Clarity》，在美国电子舞曲专辑排行榜上最高排名第三。
+Zedd现在正在制作Lady Gaga即将发行的专辑《ARTPOP》。[10]他也是Namie Amuro的专辑《FEEL》中《Heaven》一曲的制作人。</span>
+        	</div>
+        <div class="img-box2">
+           <a href="html/The Middle.html"><img src="images/Zedd2.jpg" width="770"></a>
+        </div>
+    	</div>
+	</div>
+	<div class="layer3">		
+		<div class="content">
+          <div class="img-box1">
+           <a href="html/I Do.html"><img src="images/莫文蔚.jpg" width="680" ></a>
+          </div>
+          <div class="right-box">
+             <span style="font-family: 'Microsoft JhengHei UI Light'; font-size: 26px;">25年，她从一个在台下看人发光的小女孩，蜕变成让人无法移开目光的发光体。
+她，是Karen莫文蔚。
+今年是莫文蔚出道第25年，回首过往，她从1993年出道至今，演出50部电影，演活了我们心中那些难忘的角色。音乐上，发行了超过30张专辑，7度入围、2度获得金曲奖最佳女歌手，也拿下了最佳专辑的大奖，举办超过75场个人演唱会，甚至曾在意大利和西班牙开唱！
+这样漂亮的成绩，是因为她始终珍惜每个机会、努力不懈，认真迎接各种挑战、乐观以对！爱情上，更在兜兜转转之后和初恋男友成婚，如今两人已相识31年。现在的莫文蔚，一切都如此闪亮值得庆祝，但她却认为这是她的「Halftime」，就像一场球赛，上半场值得欢呼，但比赛仍未结束。
+中场时分，让我们在「Halftime」一起狂欢吧！享受拥有的一切，为自己赞好，然后带着笑容和从未改变的热情与初衷，完成更精彩无限的下半场，成为真正的「人生胜利组」！
+带着这样的信念，Karen莫文蔚开始筹备她久违的新专辑。
+新专辑将会分为&lt;上半场 &gt;及&lt;下半场 &gt;，
+在上半场中，Karen将和过往曾和她一起缔造经典的知名制作人及音乐大师们共同完成，在久别重逢后擦出令人惊喜的全新火花。
+而下半场，你将看到莫文蔚的无限可能！</span>
+          </div>
+    	 </div>
+	</div>
+	<div class="layer4">
+		<div class="content">
+        	<div class="left-box">
+              <p><span style="font-family: 'Microsoft JhengHei UI Light'; font-size: 20px;"> 继2015年流行天王Justin Bieber推出专辑《Purpose》并且横扫乐坛之后四年，令全球乐迷翘首以盼的第五张录音室专辑终于在2019年浮出水面。2017年，Justin Bieber开始淡退公众视线，遇到困扰的他在这几年的调整期中沉淀并重识自我，经历了人生重要的转变。由一个男孩成长为一个男人，并且转变成为一名丈夫，Justin Bieber在妻子Hailey Baldwin与音乐挚友们的陪伴和影响下决定重返舞台，将重心放回音乐事业上。2020年2月14日，Justin Bieber终于交付备受全球乐迷期待的全心力作《Changes》，也率先被权威乐评滚石杂志、福布斯册封为「2020最期待专辑」，无疑是今年乐坛最引颈期盼的一张专辑。Justin Bieber表示：「这几年我的生活改变了很多，我结婚、重新回到工作，而多年以来我觉得最具有挑战的时刻，往往就是开始製作新音乐的时候。随著我年纪增长，我发现到我似乎没有好好善用我的天赋，这不只是关于我自己，而是关于帮助其他正在经历苦难的人」，怀抱著宏大的愿景、剧烈的人生关转变，越趋成熟的Justin Bieber透过音乐证明自己的改变。
+                专辑由Justin Bieber联手音乐挚友Poo Bear，Ashley Boyd，Boi-1da，Quavo等金牌音乐人联合打造。未来派R&amp;B-Pop风格让乐迷找回曾经《Journals》、《Believe》时期Bieber，韵律轻松抓耳，朗朗上口。专辑首支单曲"Yummy"在发行后迅速燃爆乐坛，全球流媒体快速破亿收听！空降美国公告牌R&amp;B单曲榜冠军，公告牌单曲榜第2位，并且，率先在加拿大以及新西兰取得金唱片销量认证。随后，Bieber邀嗓R&amp;B唱作才女Kehlani释出爱恋情歌“Get Me”，提前为情人节营造爱的主题曲。此外，首单“Yummy”发布remix混音版本，Bieber伙拍灵魂歌手Summer Walker将R&amp;B格调再度升级。随后释出的第二支主打单曲“Intentions”由Migos成员-嘻哈巨将Quavo鼎力助阵。这首令人触动的MV与非盈利组织Alexandria House合作，延续Justin Bieber一直以来的慈善事业。此外，专辑中的豪华助阵阵容还包括嘻哈当红歌手Post Malone，Travis Scott以及全才rapper Lil Dicky等音乐人。
+                在首支单曲出炉之际，Justin Bieber向全球乐迷揭晓另一重惊喜-通过纪录片《Justin Bieber: Seasons》带乐迷走进他近些年生活中。目前，他已正式成为YouTube首位达到5000万订阅者艺人。这部前所未有纪录集谈到了他的过去，从婚姻到人生面对起落的心路历程，以及倒回2015年专辑至今他音乐生涯中所历经的挑战等等。走进Justin Bieber聚光灯外的生活，透过点滴见证他的成长与蜕变。
+                《Changes》承载着爱与责任，记录他蜕变过程后的新突破。它不仅会成为改变音乐世界的关键专辑，更会是Justin Bieber音乐生涯的全新高峰。</span></p>
+            </div>
+        	<div class="img-box2">
+           		<a href="html/All Around Me.html"><img src="images/changes.jpg" width="650"></a>
+        	</div>
+    	</div>
+    </div>
+</div>
+	
+
+<!--footer-->
+<div class="footer">
+	<div class="copyright"><font color="white"><center>copyright@Trinary and Tones</center></font></div>
+</div>
+	
+</body>
+</html>

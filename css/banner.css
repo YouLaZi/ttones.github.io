@@ -1,0 +1,100 @@
+	.wrap{
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+
+	.list{
+		width:100%;
+		height: 100vh;
+		list-style: none;
+		position: relative;
+		padding-left: 0px;
+	}
+
+	/*图*/
+	
+	.item{
+		position:absolute;
+		width:100%;
+		height: 100%;
+		color:white;
+		font-size: 50px;
+		opacity: 0;
+		transition: all .8s;
+	}
+
+	.item:nth-child(1)
+		{background-image: url("../images/JUSTICE.jpg");
+	}	
+	.item:nth-child(2)
+		{background-image: url("../images/王菲2.jpg");
+	}
+	.item:nth-child(3)
+		{background-image: url("../images/STAY.jpg");
+	}
+	.item:nth-child(4)
+		{background-image: url("../images/2U.jpg");
+	}
+
+.item:nth-child image{
+	width: 100%;
+	height: 100%;
+}
+
+	/*按钮*/
+
+	.btn1{
+		border: none;
+		background-color: transparent;
+		position: absolute;
+		top:48vh;
+		z-index: 100;
+	}
+
+	.btn2{
+		border:none;
+		background-color: transparent;
+		position: absolute;
+		top:48vh;
+		z-index: 100;
+	}
+
+	#goPre{
+		left: 0px;
+	}
+
+	#goNext{
+		right: 0px;
+	}
+
+	.item.active{
+		opacity: 1;
+		z-index: 10;
+	}
+
+	.pointlist{
+		padding-left: 0px;
+		list-style: none;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		z-index: 1000;
+	}
+
+	.point{
+		width:8px;
+		height: 8px;
+		background-color: rgba(0,0,0,0.4);
+		border-radius:100%;
+		float: left;
+		margin-right: 14px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: rgba(255,255,255,0.6);
+		cursor: pointer;
+	}
+
+	.point.active{
+		background-color: rgba(255,255,255,0.6);
+	}

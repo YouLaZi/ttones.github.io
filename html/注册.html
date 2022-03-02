@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Register</title>
+<link rel="stylesheet" type="text/css" href="../css/form.css">
+</head>
+
+<body>
+<div class="login-page">
+<div class="form">
+	<form class="register-form" action="../php/注册.php" method="post">
+	<input 
+        name="username" type="text" placeholder="&quot;Please enter your name&quot;"
+        onfocus="if(value=='User Name')value=''"
+        onblur="if(!value)value='User Name'" value="User Name">
+	<input 
+        name="password" type="password" placeholder="&quot;Please enter your password&quot;" autocomplete="off"
+        onfocus="if(value=='Password')value=''"
+        onblur="if(!value)value='Password'">
+	<input 
+        name="password" type="password" placeholder="&quot;Please confirm your password&quot;" autocomplete="off"
+        onfocus="if(value=='Password')value=''"
+        onblur="if(!value)value='Password'">
+	<input 
+        name="email" type="email" placeholder="&quot;Please enter your email&quot;"
+        onfocus="if(value=='Email')value=''"
+        onblur="if(!value)value='Email'" value="Email">
+	<input name="submit" type="submit" class="btn" formmethod="POST" value="Register">
+		<p class="message">Already Registered ?<a href="登录.html">Login</a></p>
+	</form>
+	</div>	
+	
+	</div>
+</body>
+</html>

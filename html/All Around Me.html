@@ -1,0 +1,201 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>All Around Me</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<link rel="stylesheet" type="text/css" href="../css/bg.css">
+
+
+
+</head>
+<body marginheight="0" marginwidth="0" bgcolor="white" class="bg" id="body">
+	
+<!--header-->
+<DIV CLASS="h">
+<div class="header w">
+	
+<!--logo-->
+<div class="logo"></div>
+<!--nav-->
+<div class="nav">
+<ul>
+	<li><a href="../index.html">Home</a></li>
+    <li><a href="../html/zzROCK.html">Rock</a></li>
+    <li><a href="../html/zzPOP.html">Pop</a></li>
+    <li><a href="../html/zzLIGHT.html">Light</a></li>
+	<li><a href="../html/zzFOLK.html">Folk</a></li>
+    <li><a href="../html/About us.html">About us</a></li>
+</div>
+	
+<!--searcher-->
+<div class="searcher">
+	<input type="text" id="search" value="请输入关键词" 
+        onfocus="if(value=='请输入关键词')value=''"
+        onblur="if(!value)value='请输入关键词'" 
+        name="keyword">
+	<button></button>
+</div>
+	
+<!--user-->
+<div class="user"><img src="../images/01.png" alt="头像">油辣子</div>
+</div>
+</div>
+<!--layer-->
+<div class="LLlayer4">
+	<div class="boxtop">
+    </div>
+    
+    <div class="mmain bg">
+       <div class="boxleft">
+       <br><br><br><span class="span1">专辑</span><br>
+      <img  class="img-yuanjiao" src="../images/changes.jpg" width="400px">
+       	<br>
+		<span class="span1">《Changes》</span>	
+       </div>
+       
+       
+       
+       
+       
+       <div class="boxright">
+       <hr size="1" noshade color="#666666" width="95%">    
+       <font face="楷体" color="#999999" size="+6"><span>《All Around Me》</span></font><br>
+<hr size="1" noshade color="#666666" width="95%">
+      <img  class="bofang" id="icon" src="../images/播放.png">
+<br><br>
+<textarea cols="40" rows="29.5" disabled readonly>
+演唱 ： Justin Bieber
+作词 : Justin Bieber/Sasha Sirota/Jason "Poo Bear" Boyd
+作曲 : Justin Bieber/Sasha Sirota/Jason "Poo Bear" Boyd
+Not sure what I was doing before ya
+遇到你之前我无法定义自己的浑噩
+I quit tryna figure it out
+但如今我选择不再纠结
+Nothin' like havin' someone for you
+你需要那么一个人
+Someone besides you when it's time to lay down
+那个在你躺下时伴你身旁的人
+Fully committed you're here for the stay down
+向你保证会不离不弃的人
+Look in the mirror you ride for the take down
+看着后视镜中的你
+Room for you in my coupe let me open up the door
+我的车上有属于你的私人空间 大门由我为你敞开
+Open up my eyes to a feelin' I can't ignore
+睁开我的双眼去感受眼前的事物
+I need you all around me
+我需要你伴我身旁
+Oh yeah yeah yeah yeah
+I need you all around me
+我需要你伴我身旁
+Wouldn't wanna be in any other place
+不需要别的什么地方
+From my home to the road
+就从家中到路上
+I'll make sure you're comfortable
+我会让你感到舒适
+You make sure I'm comfortable
+而你也会让我惬意
+Our love's unconditional
+我们的爱没有限制
+I need you all around me
+我需要你伴我身旁
+All around me yeah
+不离不弃
+Never thought I could ever be loyal to someone other than myself
+未曾想过我会对除自己以外的人如此忠诚
+I never thought I could ever be a spoiler
+我以为我会破坏这一切
+Guess anything is possible with your help
+有了你一切变得皆有可能
+Anything's possible since you made my heart melt
+自从你深得我心后我觉得 世上没有不可能
+Gave me the best hand that I'd ever been dealt
+你再我最需要之时给予了我帮助
+Room for you in my coupe let me open up the door
+我的车上有属于你的私人空间 大门时刻为你敞开
+Open up my eyes to a feelin' I can't ignore
+睁开我的双眼去感受眼前的事物
+I need you all around me yeah
+我需要你伴我身旁
+Oh yeah yeah yeah yeah
+I need you all around me
+我需要你伴我身旁
+Wouldn't wanna be in any other place
+不需要别的什么地方
+From my home to the road
+就从家中到路上
+I'll make sure you're comfortable
+我会让你感到舒适
+You make sure I'm comfortable
+而你也会让我惬意
+Our love's unconditional
+我们的爱没有限制
+I need you all around me
+我需要你伴我身旁
+All around me yeah yeah yeah
+不离不弃
+</textarea>
+
+		<div style="float:right; margin-left:20px">
+        <span class="span1">Mv</span>
+        <hr size="1" noshade color="#990000" width="45%">
+ <video src="../media/All Around Me.mp4" width="600px" controls></video>    
+        </div>
+        
+       </div>
+	</div>
+
+</div>
+	
+
+<!--footer-->
+<div class="footer">
+	<div class="copyright">
+    
+    
+    
+    </div>
+</div>
+
+    <audio id="taichang">
+    	<source src="../media/All Around Me.mp3" type="audio/mp3">
+    </audio>
+<script>
+	var taichang = document.getElementById("taichang");
+	var icon = document.getElementById("icon");	
+	
+	icon.onclick = function(){
+		if(taichang.paused){
+		taichang.play();
+		icon.src = "../images/暂停.png";
+		}else{
+			taichang.pause()
+		icon.src = "../images/播放.png";
+		}
+	}
+</script>
+<script>
+  let cw = 1920,ch = 1080
+  let body = document.getElementById('body')
+  body.style.width = `${cw}px`
+  body.style.height = `${ch}px`
+
+  function windowResize() {
+    let w = window.innerWidth, h = window.innerHeight
+    
+    let r = w / cw < h / ch ? w / cw : h / ch
+
+    body.style.transform = `scale( ${r})`
+    body.style.marginLeft = (-(cw - r * cw) / 2 + (w - r * cw) / 2) + 'px'
+    body.style.marginTop = (-(ch - r * ch) / 2 + (h - r * ch) / 2) + 'px'
+    body.style.marginBottom = (-(h>ch?h:ch - r * ch)) + 'px'
+    body.style.marginRight = (-(w>cw?w:cw - r * cw)) + 'px'
+  }
+
+</script>
+
+</body>
+</html>
